@@ -7,21 +7,24 @@
     </ion-item>
     <ion-grid>
       <ion-row class="inputStyle">
-        <ion-input placeholder="E-mail" type="email"></ion-input>
+        <ion-input placeholder="E-mail" type="email" [(ngModel)] = 'email'></ion-input>
       </ion-row>
       <ion-row class="inputStyle">
-        <ion-input placeholder="Senha" type="password"></ion-input>
+        <ion-input placeholder="Senha" type="password" [(ngModel)] = 'password'></ion-input>
       </ion-row>
     </ion-grid>
     <ion-button 
       style="margin-top: top 20px" 
       expand="block"
       shape="round" 
-      (click)="registrar()"
+      (click)="onSubmitLogin()"
     >Entrar
     </ion-button>
     <ion-item text-center>
-        <ion-label class="text1">Criar uma conta</ion-label>    
+         
+          <span class="criarconta" routerLink="/cadastro">Criar uma conta</span>
+          
+  
     </ion-item>  
       
   </form>
