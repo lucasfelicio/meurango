@@ -7,22 +7,18 @@
       </ion-item>
         <ion-grid>
             <ion-row class="inputStyle">
-              <ion-input placeholder="Digite seu Nome"></ion-input>
+              <ion-input type="text" placeholder="Digite seu Nome" [(ngModel)]="displayName"></ion-input>
             </ion-row>
             <ion-row class="inputStyle">
-              <ion-input placeholder="Informe seu E-mail"></ion-input>
+              <ion-input type="email" placeholder="Informe seu E-mail" [(ngModel)]="email"></ion-input>
             </ion-row>
-            <ion-row class="inputStyle">
-              <ion-input placeholder="Crie uma Senha"></ion-input>
-              </ion-row>
               <ion-row class="inputStyle">
-              <ion-input placeholder="Confirme a senha"></ion-input>
+              <ion-input type="password" placeholder="Crie uma senha" [(ngModel)]="password"></ion-input>
               </ion-row>
         </ion-grid>
         <ion-button 
       style="margin-top: top 20px" 
       expand="block"
-      shape="round" 
-        >Cadastre-se
-    </ion-button>
+      shape="round"
+      (click)="register()">Cadastre-se</ion-button>
 </ion-content>
