@@ -1,27 +1,29 @@
+
+
 <ion-content padding class="loginPage" scroll="false">
   <form>
-    <ion-item text-center class="logoStyle">
-      <ion-label>
+  
+    <div class="logoStyle">
         <img src="assets/img/logo.png" alt="Logotipo">
-      </ion-label>
-    </ion-item>
+    </div>
     <ion-grid>
       <ion-row class="inputStyle">
-        <ion-input placeholder="E-mail" type="email"></ion-input>
+        <ion-input placeholder="E-mail" type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-row>
       <ion-row class="inputStyle">
-        <ion-input placeholder="Senha" type="password"></ion-input>
+        <ion-input placeholder="Senha" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-row>
     </ion-grid>
     <ion-button 
       style="margin-top: top 20px" 
       expand="block"
       shape="round" 
-      (click)="registrar()"
+      (click)="onSubmitLogin()"
     >Entrar
     </ion-button>
     <ion-item text-center>
-        <ion-label class="text1">Criar uma conta</ion-label>    
+         
+          <span class="criarconta" routerLink="/cadastro">Criar uma conta</span>
     </ion-item>  
       
   </form>
