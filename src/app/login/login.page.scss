@@ -1,17 +1,57 @@
-.inputStyle{
-    background-color: rgb(228, 228, 228);
-    margin-top: 10px;
-    padding-left: 5px;
-    border-radius: 30px;
+//Logotipo
+.logoStyle img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 150px;
+  min-height: 115px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.logoStyle img{
-    margin-top: 50px;
-    max-width: 100px;
-    min-height: 115px;
-    margin-left: -15px;
-    padding: 25px 0 20px 0;
+//Campos Input(email,senha)
+ion-input {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff4500;
+  font-size: 15px;
 }
 
+//Botão fazer login
 
+ion-button.entrar {
+  --background: #ff4500;
+  --color: #fff;
+  --box-shadow: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: initial;
+  font-size: 15px;
+}
+ion-button.entrar:hover {
+  --background: #ff8052;
+}
 
+//Label
+ion-col.label {
+  display: flex;
+}
+ion-label {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+}
+
+//Botão criar conta
+ion-button.register {
+  --background: #fff;
+  --color: #ff4500;
+  --box-shadow: none;
+  margin-top: 20px;
+  text-transform: initial;
+  font-size: 15px;
+}
+ion-button.register:hover {
+  --background: #ff8052;
+  --color: #fff;
+}
