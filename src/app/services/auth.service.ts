@@ -19,7 +19,7 @@ export class AuthService {
     this.AFauth.auth.signOut();
     this.router.navigate(['/login']);
   }
-  register(displayname: string, email: string, password: string) {
+  register(displayname: string, email: string, password: string, confirmPassword: string) {
     return this.AFauth.auth.createUserWithEmailAndPassword(email, password).then(res => {
       res.user.updateProfile({displayName: displayname});
     });

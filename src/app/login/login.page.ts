@@ -1,6 +1,9 @@
 import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {CadastroPage} from '../cadastro/cadastro.page';
+import {HomePage} from '../home/home.page';
+
 
 @Component({
   selector: 'app-login',
@@ -16,11 +19,16 @@ export class LoginPage implements OnInit {
   ngOnInit() {
 
   }
-
   onSubmitLogin() {
     this.authservice.login(this.email, this.password).then(res => {
     this.router.navigate(['/home']);
    }).catch(err => alert('Dados incorretos'));
    }
+   openCadastro() {
+     this.router.navigate(['/cadastro']);
+   }
+   openHome() {
+    this.router.navigate(['/home']);
+  }
 
 }
