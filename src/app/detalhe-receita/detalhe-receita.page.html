@@ -1,9 +1,33 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>detalhe-receita</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="openHome()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalhe da receita</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div>
+    <img src="assets/img/receitateste.jpg">
+  </div>
+  <ion-item>
+    <ion-label>Arroz integral com ervas finas</ion-label>
+  </ion-item>
+  <ion-grid padding>
+    <ion-row>
+      <ion-label class="subTitulo">Ingredientes</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-textarea rows="4" placeholder="Aqui irá aparecer os ingredientes"></ion-textarea>
+    </ion-row>
+    <ion-row>
+      <ion-label class="subTitulo">Modo de preparo</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-textarea rows="4" placeholder="Aqui irá aparecer o modo de preparo"></ion-textarea>
+    </ion-row>
+  </ion-grid>
 </ion-content>
