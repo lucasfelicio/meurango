@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { AuthService } from './services/auth.service';
+
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -14,7 +15,7 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private menu: MenuController
+    private authService: AuthService
   ) {
     this.initializeApp();
   }
@@ -25,12 +26,8 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-  openFirst() {
-    this.menu.enable(true, 'content1');
-    this.menu.open('content1');
+  logout() {
+    this.authService.logout();
   }
 
-  openEnd() {
-    this.menu.open('end');
-  }
 }
