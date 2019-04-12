@@ -4,15 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { NologinGuard } from './guards/nologin.guard';
 
   const routes: Routes = [
-<<<<<<< HEAD
-    { path: '', redirectTo: 'cadastro', pathMatch: 'full' },
-=======
-    { path: '', redirectTo: 'cadastro-receita', pathMatch: 'full' },
->>>>>>> CadastroReceita
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', loadChildren: './home/home.module#HomePageModule' },
     { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
     { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
   { path: 'cadastro-receita', loadChildren: './cadastro-receita/cadastro-receita.module#CadastroReceitaPageModule' },
+  { path: 'detalhe-receita', loadChildren: './detalhe-receita/detalhe-receita.module#DetalheReceitaPageModule' },
+
 
   ];
 
