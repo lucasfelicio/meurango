@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NologinGuard } from './guards/nologin.guard';
 
   const routes: Routes = [
-    { path: '', redirectTo: 'cadastro', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', loadChildren: './home/home.module#HomePageModule' },
     { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
     { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
