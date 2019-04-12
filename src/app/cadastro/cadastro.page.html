@@ -1,24 +1,30 @@
-
-<ion-content padding class="loginPage" scroll="false">
-    <ion-item class="logo" text-center>
-        <ion-label >
-            <img src="assets/img/logo.png" alt="Logotipo"> 
-        </ion-label>
-      </ion-item>
-        <ion-grid>
-            <ion-row class="inputStyle">
-              <ion-input type="text" placeholder="Digite seu Nome" [(ngModel)]="displayName"></ion-input>
-            </ion-row>
-            <ion-row class="inputStyle">
-              <ion-input type="email" placeholder="Informe seu E-mail" [(ngModel)]="email"></ion-input>
-            </ion-row>
-              <ion-row class="inputStyle">
-              <ion-input type="password" placeholder="Crie uma senha" [(ngModel)]="password"></ion-input>
-              </ion-row>
-        </ion-grid>
-        <ion-button 
-      style="margin-top: top 20px" 
-      expand="block"
-      shape="round"
-      (click)="register()">Cadastre-se</ion-button>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="openLogin()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registre-se</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding scroll="false">
+  <div class="logoStyle">
+    <img src="assets/img/logo.png" alt="Logotipo">
+  </div>
+  <ion-grid>
+    <ion-row class="inputStyle">
+      <ion-input type="text" placeholder="Nome" [(ngModel)]="displayName"></ion-input>
+    </ion-row>
+    <ion-row class="inputStyle">
+      <ion-input type="email" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+    </ion-row>
+    <ion-row class="inputStyle">
+      <ion-input type="password" placeholder="Senha" [(ngModel)]="password"></ion-input>
+    </ion-row>
+    <ion-row class="inputStyle">
+      <ion-input type="password" placeholder="Confirme a Senha" [(ngModel)]="confirmPassword"></ion-input>
+    </ion-row>
+  </ion-grid>
+  <ion-button class="salvar"  expand="block" shape="round"  (click)="register()">Salvar</ion-button>
 </ion-content>

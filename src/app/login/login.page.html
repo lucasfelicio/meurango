@@ -1,30 +1,36 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start" (click)="openHome()">
+          <ion-button>
+            <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title>Login</ion-title>
+      </ion-toolbar>
+</ion-header>
 
+<ion-content padding scroll="false">
+  <div class="logoStyle">
+    <img src="assets/img/logo.png" alt="Logotipo">
+  </div>
+  <ion-grid>
+    <ion-row class="inputStyle">
+      <ion-input placeholder="E-mail" type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+      </ion-input>
+    </ion-row>
+    <ion-row class="inputStyle">
+      <ion-input placeholder="Senha" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+      </ion-input>
+    </ion-row>
+  </ion-grid>
 
-<ion-content padding class="loginPage" scroll="false">
-  <form>
-  
-    <div class="logoStyle">
-        <img src="assets/img/logo.png" alt="Logotipo">
-    </div>
-    <ion-grid>
-      <ion-row class="inputStyle">
-        <ion-input placeholder="E-mail" type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
-      </ion-row>
-      <ion-row class="inputStyle">
-        <ion-input placeholder="Senha" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>
-      </ion-row>
-    </ion-grid>
-    <ion-button 
-      style="margin-top: top 20px" 
-      expand="block"
-      shape="round" 
-      (click)="onSubmitLogin()"
-    >Entrar
-    </ion-button>
-    <ion-item text-center>
-         
-          <span class="criarconta" routerLink="/cadastro">Criar uma conta</span>
-    </ion-item>  
-      
-  </form>
+  <ion-button class="fazerLogin"  expand="block" shape="round" (click)="onSubmitLogin()">Fazer login </ion-button>
+  <ion-row>
+    <ion-col class="label">
+      <ion-label>Não tem uma conta ainda? Crie agora!</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-button class="registre-se" expand="block" shape="round" (click)="openCadastro()"> Registre-se </ion-button>
+
 </ion-content>
