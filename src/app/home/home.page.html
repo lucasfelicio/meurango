@@ -1,18 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      MeuRango
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-button (click)="logout()">Sair</ion-button>
-  <div class="ion-padding">
-    <h1>Disciplina</h1>
-    Desenvolvimento de aplicativos móveis
-    <h1>Alunos</h1>
-    Lucas Felício <br>
-    Josiel Braun Rodrigues
+<ion-content padding scroll="false">
+  <div class="logoStyle">
+    <img src="assets/img/logo.png" alt="Logotipo">
   </div>
+  <ion-grid>
+    <ion-row class="inputStyle">
+      <ion-input placeholder="Digite os ingredientes separados por virgula" type="text">
+      </ion-input>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button class="buscar" expand="block" shape="round"> Buscar </ion-button>
+
+
 </ion-content>
