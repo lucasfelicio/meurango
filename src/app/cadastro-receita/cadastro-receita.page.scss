@@ -1,6 +1,14 @@
-ion-input{
+//Campos Input(email,senha)
+ion-input {
     margin-top: 10px;
-    padding-left: 5px;
-    border-radius: 30px;
-    border: 2px solid #ff4500
+    border-radius: 10px;
+    border: 2px solid #ff4500;
+    font-size: 15px;
+  }
+ion-label{
+    --color: #ff4500;
+}
+
+ion-textarea.ingredientes{
+    --background: #444444; 
 }

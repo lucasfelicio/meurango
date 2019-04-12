@@ -1,18 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Cadastro de Receita</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button icon="arrow-round-back"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content padding scroll="false">
   <ion-grid>
     <ion-row>
       <ion-input type="text" placeholder="Nome da receita"></ion-input>
     </ion-row>
-    <ion-row>       
+    <ion-button expand="block" shape="round">adicionar imagem</ion-button>
+    <ion-row>
+      <ion-label class="label">Ingredientes</ion-label>
     </ion-row>
-    <ion-button (click)="onClick()" expand="block" shape="round" >
-      adicionar imagem
-    </ion-button>
+    <ion-row>
+      <ion-label class="label" >Modo de preparo</ion-label>
+    </ion-row>
+    <ion-button expand="block" shape="round">salvar receita</ion-button>
   </ion-grid>
 </ion-content>
