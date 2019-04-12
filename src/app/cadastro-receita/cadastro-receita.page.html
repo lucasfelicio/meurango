@@ -1,10 +1,13 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button icon="arrow-round-back"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="openHome()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Cadastro de receita</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content padding scroll="false">
   <ion-grid>
@@ -13,10 +16,16 @@
     </ion-row>
     <ion-button expand="block" shape="round">adicionar imagem</ion-button>
     <ion-row>
-      <ion-label class="label">Ingredientes</ion-label>
+      <ion-label class="labelF1">Ingredientes</ion-label>
     </ion-row>
     <ion-row>
-      <ion-label class="label" >Modo de preparo</ion-label>
+      <ion-textarea rows="5" placeholder="Digite os ingredientes aqui..."></ion-textarea>
+    </ion-row>
+    <ion-row>
+      <ion-label class="labelF1">Modo de preparo</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-textarea rows="5" placeholder="Digite o modo de preparo aqui..."></ion-textarea>
     </ion-row>
     <ion-button expand="block" shape="round">salvar receita</ion-button>
   </ion-grid>
