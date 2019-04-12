@@ -1,0 +1,45 @@
+//Campos Input(email,senha)
+ion-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff4500;
+  font-size: 15px;
+}
+ion-input.inputTempo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff4500;
+  font-size: 12px;
+}
+
+ion-textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff4500;
+  font-size: 15px;
+}
+ion-label.labelF1 {
+  font-size: 18px;
+  color: #ff4500;
+  margin-top: 5px;
+}
+ion-label.labelF2 {
+  font-size: 12px;
+  color: #949494;
+  margin-top: 5px;
+}
+ion-icon.iconAlarm {
+  color: #ff4500;
+  font-size: 24px;
+}
+
+ion-item.itemTempo {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff4500;
+  box-shadow: none;
+}
