@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HomePage } from '../home/home.page';
+import { CadastroReceitaPage } from '../cadastro-receita/cadastro-receita.page';
 
 @Component({
   selector: 'app-receitas',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitasPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
+  }
+  openHome() {
+    this.router.navigate(['/home']);
+  }
+  openCadReceita() {
+    this.router.navigate(['/cadastro-receita']);
   }
 
 }
