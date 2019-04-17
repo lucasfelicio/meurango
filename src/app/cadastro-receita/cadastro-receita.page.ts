@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HomePage } from '../home/home.page';
 
 @Component({
   selector: 'app-cadastro-receita',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroReceitaPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
+  }
+  openHome() {
+    this.router.navigate(['/home']);
   }
 
 }
