@@ -12,8 +12,8 @@ export class CadastroPage implements OnInit {
 
   displayname: string;
   email: string;
-  password: string;
-  confirmPassword: string;
+  password = '';
+  confirmPassword = '';
 
   constructor(private authService: AuthService, private router: Router) { }
 
