@@ -30,13 +30,8 @@ export class AppComponent {
       title: 'Minhas Receitas',
       url: '/home',
       icon: 'heart'
-    },
-    {
-      title: 'Sair',
-      url: '/home',
-      icon: 'log-out'
     }
-  ];
+    ];
 
   constructor(
     private platform: Platform,
