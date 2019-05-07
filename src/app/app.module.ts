@@ -17,8 +17,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { from } from 'rxjs';
 
-
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

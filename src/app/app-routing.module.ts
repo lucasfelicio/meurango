@@ -3,26 +3,27 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NologinGuard } from './guards/nologin.guard';
 
-  const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-    { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-    { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
   { path: 'cadastro-receita', loadChildren: './cadastro-receita/cadastro-receita.module#CadastroReceitaPageModule' },
+  { path: 'cadastro-receita/:id', loadChildren: './cadastro-receita/cadastro-receita.module#CadastroReceitaPageModule' },
   { path: 'detalhe-receita', loadChildren: './detalhe-receita/detalhe-receita.module#DetalheReceitaPageModule' },
   { path: 'receitas', loadChildren: './receitas/receitas.module#ReceitasPageModule' },
 
 
 
-  ];
+];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, )
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 
 
