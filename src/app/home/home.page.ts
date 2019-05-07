@@ -1,5 +1,5 @@
 import { AuthService } from './../services/auth.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) { }
 
   logout() {
     this.authService.logout();

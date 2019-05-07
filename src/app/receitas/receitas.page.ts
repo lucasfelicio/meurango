@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomePage } from '../home/home.page';
 import { CadastroReceitaPage } from '../cadastro-receita/cadastro-receita.page';
+import { ReceitaI } from '../model/receita';
+import { ReceitasService } from '../services/receitas.service';
 
 @Component({
   selector: 'app-receitas',
@@ -10,9 +12,14 @@ import { CadastroReceitaPage } from '../cadastro-receita/cadastro-receita.page';
 })
 export class ReceitasPage implements OnInit {
 
-  constructor(public router: Router) { }
+  receitas: ReceitaI[];
+  
+  constructor(public router: Router, private receitaSerice:ReceitasService) { }
 
   ngOnInit() {
+    this.receitaSerice.getReceitas().subscribe(res =>{
+      this.receitas = res
+    })
   }
   openHome() {
     this.router.navigate(['/home']);
