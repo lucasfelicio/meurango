@@ -16,16 +16,24 @@
     </ion-row>
     <ion-button expand="block" shape="round">adicionar imagem</ion-button>
     <ion-row>
+      <ion-item lines="none">
+        <ion-label class="labelF2">Tempo de preparo:</ion-label>
+        <ion-datetime class="tempoPreparo" displayFormat="HH:mm" [(ngModel)]="receita.tempoPreparo"></ion-datetime>
+      </ion-item>
+    </ion-row>
+    <ion-row>
       <ion-label class="labelF1">Ingredientes</ion-label>
     </ion-row>
     <ion-row>
-      <ion-textarea [(ngModel)]="receita.ingredientes" rows="5" placeholder="Digite os ingredientes aqui..."></ion-textarea>
+      <ion-textarea [(ngModel)]="receita.ingredientes" rows="5" placeholder="Digite os ingredientes aqui...">
+      </ion-textarea>
     </ion-row>
     <ion-row>
       <ion-label class="labelF1">Modo de preparo</ion-label>
     </ion-row>
     <ion-row>
-      <ion-textarea [(ngModel)]="receita.modoPreparo" rows="5" placeholder="Digite o modo de preparo aqui..."></ion-textarea>
+      <ion-textarea [(ngModel)]="receita.modoPreparo" rows="5" placeholder="Digite o modo de preparo aqui...">
+      </ion-textarea>
     </ion-row>
     <ion-button (click)="add()" expand="block" shape="round">salvar receita</ion-button>
   </ion-grid>
