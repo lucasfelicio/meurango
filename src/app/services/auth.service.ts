@@ -3,13 +3,16 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { resolve } from 'url';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
 
-  constructor(private AFauth: AngularFireAuth , public router: Router) { }
+  constructor(private AFauth: AngularFireAuth, public router: Router) { }
 
   login(email: string, password: string) {
     return this.AFauth.auth.signInWithEmailAndPassword(email, password);
@@ -21,8 +24,8 @@ export class AuthService {
   }
   register(displayname: string, email: string, password: string, confirmPassword: string) {
     return this.AFauth.auth.createUserWithEmailAndPassword(email, password).then(res => {
-      res.user.updateProfile({displayName: displayname});
+      res.user.updateProfile({ displayName: displayname });
     });
   }
-  }
+}
 

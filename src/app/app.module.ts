@@ -5,6 +5,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,16 +16,18 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { from } from 'rxjs';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-  BrowserModule,
-  IonicModule.forRoot(),
-  AppRoutingModule,
-  AngularFireModule.initializeApp(environment.firebase),
-  AngularFireAuthModule,
-  AngularFirestoreModule
+    BrowserModule,
+    FormsModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
   providers: [
     StatusBar,
@@ -33,4 +36,4 @@ import { from } from 'rxjs';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

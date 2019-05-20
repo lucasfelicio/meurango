@@ -28,5 +28,6 @@
     <ion-text *ngIf="password.length < 6 ">Senhas deve conter mais de 6 digitos</ion-text>
     <ion-text *ngIf="password != confirmPassword ">Senhas diferentes!</ion-text>
   </ion-grid>
-  <ion-button class="salvar"  expand="block" shape="round" [disabled]="password != confirmPassword || password.length <6 " (click)="register()">Salvar</ion-button>
+  <ion-button class="salvar" expand="block" shape="round"
+    [disabled]="password != confirmPassword || password.length <6 " (click)="register()">Salvar</ion-button>
 </ion-content>
