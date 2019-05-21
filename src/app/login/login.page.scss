@@ -14,7 +14,7 @@
 ion-input {
   margin-top: 10px;
   border-radius: 10px;
-  border: 2px solid #7e7d7c;
+  border: 1px solid #7e7d7c;
   font-size: 15px;
 }
 
@@ -44,14 +44,14 @@ ion-label {
 
 //Botão criar conta
 ion-button.registre-se {
-  --background: #fff;
-  --color: #ff4500;
+  --background: #ff8052;
+  --color: #fff;
   --box-shadow: none;
   margin-top: 20px;
   text-transform: initial;
   font-size: 15px;
 }
 ion-button.registre-se:hover {
-  --background: #ff8052;
+  --background: #ff4500;
   --color: #fff;
 }

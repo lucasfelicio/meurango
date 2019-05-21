@@ -10,11 +10,11 @@
     margin-right: auto;
   }
 
-//Campos Input(email,senha)
+//Campos Input
 ion-input {
     margin-top: 10px;
     border-radius: 10px;
-    border: 2px solid #7e7d7c;
+    border: 1px solid #7e7d7c;
     font-size: 15px;
   }
 
@@ -30,4 +30,9 @@ ion-button.salvar {
 }
 ion-button.salvar:hover {
   --background: #ff8052;
+}
+.alert{
+  margin-left: 5px;
+  color: #fc0015;
+  font-size: 15px;
 }
