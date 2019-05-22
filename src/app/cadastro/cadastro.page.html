@@ -22,10 +22,10 @@
     <ion-row class="inputStyle">
       <ion-input type="password" placeholder="Senha" [(ngModel)]="password"></ion-input>
     </ion-row>
-    <ion-text class="alert" *ngIf="password.length < 6 ">Senha deve conter no minímo 6 caracteres </ion-text>
     <ion-row class="inputStyle">
       <ion-input type="password" placeholder="Confirme a Senha" [(ngModel)]="confirmPassword"></ion-input>
     </ion-row>
+    <ion-text class="alert" *ngIf="password.length < 6 ">Senha deve conter no minímo 6 caracteres </ion-text>
     <ion-text class="alert" *ngIf="confirmPassword != password ">Senhas diferentes!</ion-text>
   </ion-grid>
   <ion-button class="salvar" expand="block" shape="round"
