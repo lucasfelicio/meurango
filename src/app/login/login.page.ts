@@ -30,5 +30,15 @@ export class LoginPage implements OnInit {
    openHome() {
     this.router.navigate(['/home']);
   }
+  loginWithGoogle() {
+    this.authservice.loginWithGoogle().then(res => {
+    this.router.navigate(['/home']);
+   }).catch(err => alert('Acesso não autorizado'));
+   }
+   loginWithFace() {
+    this.authservice.loginWithFace().then(res => {
+      this.router.navigate(['/home']);
+     }).catch(err => alert('Acesso não autorizado'));
+   }
 
 }
