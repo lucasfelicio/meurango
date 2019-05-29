@@ -55,8 +55,8 @@ ion-button.registre-se:hover {
   --background: #ff4500;
   --color: #fff;
 }
-//Botões login GOOGLE e FACE
-ion-button.buttonGF{
+//Botões login GOOGLE 
+ion-button.buttonGoogle{
   --background: #4285f4;
   --color: #fff;
   --box-shadow: none;
@@ -64,6 +64,18 @@ ion-button.buttonGF{
   text-transform: initial;
   font-size: 15px;
 }
-ion-icon.buttonGF{
+ion-icon.buttonGoogle{
   margin-right: 10px;
 }
+ion-button.buttonFace{
+  --background: #3c5a99;
+  --color: #fff;
+  --box-shadow: none;
+  margin-top: 20px;
+  text-transform: initial;
+  font-size: 15px;
+}
+ion-icon.buttonFace{
+  margin-right: 10px;
+}
+
