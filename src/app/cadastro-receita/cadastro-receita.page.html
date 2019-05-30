@@ -10,31 +10,36 @@
 </ion-header>
 
 <ion-content padding scroll="false">
-  <ion-grid>
-    <ion-row>
-      <ion-input [(ngModel)]="receita.nome" type="text" placeholder="Nome da receita"></ion-input>
-    </ion-row>
-    <ion-button expand="block" shape="round">adicionar imagem</ion-button>
-    <ion-row>
-      <ion-item lines="none">
-        <ion-label class="labelF2">Tempo de preparo:</ion-label>
-        <ion-datetime class="tempoPreparo" displayFormat="HH:mm" [(ngModel)]="receita.tempoPreparo"></ion-datetime>
-      </ion-item>
-    </ion-row>
-    <ion-row>
-      <ion-label class="labelF1">Ingredientes</ion-label>
-    </ion-row>
-    <ion-row>
-      <ion-textarea [(ngModel)]="receita.ingredientes" rows="5" placeholder="Digite os ingredientes aqui...">
-      </ion-textarea>
-    </ion-row>
-    <ion-row>
-      <ion-label class="labelF1">Modo de preparo</ion-label>
-    </ion-row>
-    <ion-row>
-      <ion-textarea [(ngModel)]="receita.modoPreparo" rows="5" placeholder="Digite o modo de preparo aqui...">
-      </ion-textarea>
-    </ion-row>
+  <div>
+    <ion-input [(ngModel)]="receita.nome" type="text" placeholder="Nome da receita"></ion-input>
+  </div>
+  <div>
+    <ion-button (click)="takePicture()" expand="block" shape="round">Adicionar imagem</ion-button>
+    <img [(ngModel)]="receita.imagem" class="imgReceita" [src]="currentImage" *ngIf="currentImage">
+  </div>
+  <div>
+    <ion-label>Tempo de preparo:</ion-label>
+  </div>
+  <div>
+    <ion-item lines="none">
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="receita.tempoPreparo"></ion-datetime>
+    </ion-item>
+  </div>
+  <div>
+    <ion-label>Ingredientes</ion-label>
+  </div>
+  <div>
+    <ion-textarea [(ngModel)]="receita.ingredientes" rows="5" placeholder="Digite os ingredientes aqui...">
+    </ion-textarea>
+  </div>
+  <div>
+    <ion-label>Modo de preparo</ion-label>
+  </div>
+  <div>
+    <ion-textarea [(ngModel)]="receita.modoPreparo" rows="5" placeholder="Digite o modo de preparo aqui...">
+    </ion-textarea>
+  </div>
+  <div>
     <ion-button (click)="add()" expand="block" shape="round">salvar receita</ion-button>
-  </ion-grid>
+  </div>
 </ion-content>
