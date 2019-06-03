@@ -29,5 +29,5 @@
     <ion-text class="alert" *ngIf="confirmPassword != password ">Senhas diferentes!</ion-text>
   </ion-grid>
   <ion-button class="salvar" expand="block" shape="round"
-    [disabled]="password != confirmPassword || password.length <6 " (click)="register()">Salvar</ion-button>
+    [disabled]="password != confirmPassword || password.length < 6 " (click)="register()">Salvar</ion-button>
 </ion-content>
