@@ -4,6 +4,7 @@ import { HomePage } from '../home/home.page';
 import { ReceitasService } from '../services/receitas.service';
 import { ReceitaI } from '../model/receita';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-cadastro-receita',
@@ -25,7 +26,8 @@ export class CadastroReceitaPage implements OnInit {
     public router: Router,
     private receitaService: ReceitasService,
     private route: ActivatedRoute,
-    private camera: Camera
+    private camera: Camera,
+    private st: AngularFireStorage
   ) { }
 
   ngOnInit() {
@@ -40,8 +42,12 @@ export class CadastroReceitaPage implements OnInit {
   add() {
     if (this.receitaID) {
       this.receitaService.update(this.receita, this.receitaID);
+      const pictures = this.st.ref('pictures');
+    pictures.putString(this.currentImage,'data_url');
     }
     else {
+      const pictures = this.st.ref('pictures');
+      pictures.putString(this.currentImage,'data_url');
       this.receitaService.addReceita(this.receita);
     }
     this.router.navigate(['/home'])
@@ -56,13 +62,14 @@ export class CadastroReceitaPage implements OnInit {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
+      mediaType: this.camera.MediaType.PICTURE,
+      correctOrientation: true
     }
-
     this.camera.getPicture(options).then((imageData) => {
       this.currentImage = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
       console.log("Camera issue:" + err);
     });
+    
   }
 }
