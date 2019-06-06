@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "872383781754",
+    "firebase_url": "https://meurango-aea15.firebaseio.com",
+    "project_id": "meurango-aea15",
+    "storage_bucket": "meurango-aea15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872383781754:android:764d2cb7da3280eb",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872383781754-n6pfvg61h67s8uipbknc68cld9k0223b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.starter",
+            "certificate_hash": "5c56fd192d418a6062b15c57a4ae35e2d5eb9093"
+          }
+        },
+        {
+          "client_id": "872383781754-lpqsa6tuspovggf582bih56mukehiqfr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKldB05_DltB0tb7i23KQUy_oBUi8rFAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872383781754-lpqsa6tuspovggf582bih56mukehiqfr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
