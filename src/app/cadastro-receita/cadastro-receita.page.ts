@@ -70,6 +70,5 @@ export class CadastroReceitaPage implements OnInit {
     }, (err) => {
       console.log("Camera issue:" + err);
     });
-    
   }
 }
