@@ -5,5 +5,4 @@ export interface ReceitaI {
     tempoPreparo: number;
     ingredientes: string;
     modoPreparo: string;
-
 }

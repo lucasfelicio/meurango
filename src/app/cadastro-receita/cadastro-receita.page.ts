@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { HomePage } from '../home/home.page';
-import { ReceitasService } from '../services/receitas.service';
+import { ReceitaService } from '../services/receita.service';
 import { ReceitaI } from '../model/receita';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { AngularFireStorage } from '@angular/fire/storage';
@@ -24,32 +23,20 @@ export class CadastroReceitaPage implements OnInit {
 
   constructor(
     public router: Router,
-    private receitaService: ReceitasService,
+    private receitaService: ReceitaService,
     private route: ActivatedRoute,
     private camera: Camera,
     private st: AngularFireStorage
   ) { }
 
   ngOnInit() {
-    this.receitaID = this.route.snapshot.params['id'];
-    if (this.receitaID) {
-      this.receitaService.getReceita(this.receitaID).subscribe(res => {
-        this.receita = res;
-      })
-    }
+
   }
 
   add() {
-    if (this.receitaID) {
-      this.receitaService.update(this.receita, this.receitaID);
-      const pictures = this.st.ref('pictures');
-    pictures.putString(this.currentImage,'data_url');
-    }
-    else {
-      const pictures = this.st.ref('pictures');
-      pictures.putString(this.currentImage,'data_url');
-      this.receitaService.addReceita(this.receita);
-    }
+    this.receitaService.addReceita(this.receita);
+    const pictures = this.st.ref('pictures');
+    pictures.putString(this.currentImage, 'data_url');
     this.router.navigate(['/home'])
   }
 

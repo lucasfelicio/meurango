@@ -10,32 +10,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items | async">
-        {{items | json}}
-    </ion-item>
-  </ion-list>
+  <ion-content padding >
+    <ion-card *ngFor= "let receita of receitas" lines="inset" 
+    button [routerLink]="['/detalhe-receita',receita.id]">
 
- <!-- 
-  <div>
-    <img src="assets/img/receitateste.jpg">
-  </div>
-  <ion-item>
-    <ion-label>Arroz integral com ervas finas</ion-label>
-  </ion-item>
-  <ion-grid padding>
-    <ion-row>
-      <ion-label class="subTitulo">Ingredientes</ion-label>
-    </ion-row>
-    <ion-row>
-      <ion-textarea rows="4" placeholder="Aqui irá aparecer os ingredientes"></ion-textarea>
-    </ion-row>
-    <ion-row>
-      <ion-label class="subTitulo">Modo de preparo</ion-label>
-    </ion-row>
-    <ion-row>
-      <ion-textarea rows="4" placeholder="Aqui irá aparecer o modo de preparo"></ion-textarea>
-    </ion-row>
-  </ion-grid>
-  -->
+        <ion-item>
+          <ion-row>
+            <ion-col>
+
+            </ion-col>
+            <ion-col >
+              <h1 >{{produto.titulo}}</h1>
+
+            </ion-col>
+          </ion-row>
+        </ion-item>
+    </ion-card>
 </ion-content>
