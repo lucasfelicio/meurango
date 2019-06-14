@@ -10,6 +10,13 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items | async">
+        {{items | json}}
+    </ion-item>
+  </ion-list>
+
+ <!-- 
   <div>
     <img src="assets/img/receitateste.jpg">
   </div>
@@ -30,4 +37,5 @@
       <ion-textarea rows="4" placeholder="Aqui irá aparecer o modo de preparo"></ion-textarea>
     </ion-row>
   </ion-grid>
+  -->
 </ion-content>

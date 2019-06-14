@@ -10,14 +10,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-label>Aqui irá parecer as receitas em lista</ion-label>
-    </ion-item>
-  </ion-list>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button routerLink="/cadastro-receita" routerDirection="forward">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+  
+  <ion-lis>
+    <ion-item *ngFor="let receita of (receitas | async)">
+        {{receita.nome}}
+    </ion-item>
+  </ion-lis>
 </ion-content>

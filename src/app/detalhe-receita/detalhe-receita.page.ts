@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { HomePage } from '../home/home.page';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ReceitaService} from 'src/app/services/receita.service';
+import { ReceitaI} from 'src/app/model/receita';
+import { ToastController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-detalhe-receita',
@@ -12,14 +12,34 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class DetalheReceitaPage implements OnInit {
 
-  items: Observable<any[]>;
+  receita: ReceitaI = {
+    nome: '',
+    ingredientes: '',
+    modoPreparo: '',
+    tempoPreparo: 0,
+    imagem: ''
+  };
 
-  constructor(public router: Router, private db: AngularFirestore, private angularFireAuth: AngularFireAuth) {
-    this.items = db.collection('receitas').valueChanges();
+  constructor(
+      private router: Router,
+      private activatedRoute: ActivatedRoute,
+      private receitaService: ReceitaService,
+      private toastCtrl: ToastController
+    ) {
+  }
+
+  ionViewWollEnter(){
+    let id = this.activatedRoute.snapshot.paramMap.get('id');
+    if (id) {
+      this.receitaService.getReceita(id).subscribe(receita => {
+        this.receita = receita;
+      });
+    }
   }
 
   ngOnInit() {
   }
+
   openHome() {
     this.router.navigate(['/home']);
   }

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HomePage } from '../home/home.page';
-import { CadastroReceitaPage } from '../cadastro-receita/cadastro-receita.page';
+import { ReceitaService } from '../services/receita.service';
+import { Observable } from 'rxjs';
 import { ReceitaI } from '../model/receita';
-import { ReceitasService } from '../services/receitas.service';
 
 @Component({
   selector: 'app-receitas',
@@ -12,14 +11,12 @@ import { ReceitasService } from '../services/receitas.service';
 })
 export class ReceitasPage implements OnInit {
 
-  receitas: ReceitaI[];
+  private receitas: Observable<ReceitaI[]>;
   
-  constructor(public router: Router, private receitaSerice:ReceitasService) { }
+  constructor(public router: Router, private receitaService: ReceitaService) { }
 
   ngOnInit() {
-    this.receitaSerice.getReceitas().subscribe(res =>{
-      this.receitas = res
-    })
+    this.receitas = this.receitaService.getReceitas();
   }
   openHome() {
     this.router.navigate(['/home']);
